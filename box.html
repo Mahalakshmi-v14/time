@@ -1,0 +1,83 @@
+
+<html> 
+
+<body>
+    <div class="container">
+
+        <div class="counter">
+            <span> count</span>
+            <p id="count"> 0</p>
+        </div>
+        
+        
+        <div>
+            <button onclick="inc()">+</button> <br>
+            <button onclick="dec()">-</button>
+        </div>
+        <div class="clicks">
+            <p><span id="incCount"></span></p>
+            <p><span id="decCount"></span></p>
+        </div>
+    </div>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f4f8;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #e19898;
+}
+
+.counter {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 5px;
+    cursor: pointer;
+    background-color: rgb(167, 194, 185);
+}
+
+.clicks {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+    </style>
+    <script>
+        let a = 0;
+        const count = document.getElementById("count");
+        const incCount = document.getElementById("incCount");
+        const decCount = document.getElementById("decCount");
+        function inc() {
+            a++;
+     
+     
+
+    update();
+}
+
+function dec() {
+    a--;
+    update();
+}
+
+function update() {
+
+    count.textContent = a;     
+}
+    </script>
+</body>
+</html>
